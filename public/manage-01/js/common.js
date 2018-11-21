@@ -9,4 +9,31 @@ $(function() {
     $(document).on('ajaxStop', function () {
         NProgress.done();
     })
+
+    // 2.侧边栏的隐藏与显示
+    $('.lt_topbar .menu').on('click', function () {
+        console.log(11);
+        $('.lt_aside').toggleClass('hidemenu');
+        $('.lt_topbar').toggleClass('hidemenu');
+        $('.lt_main').toggleClass('hidemenu');
+    })
+
+    // 3. 退出功能
+    $('.logout').on('click', function () {
+        $('#modal').modal('show');
+    })
+
+    $('#logoutBtn').on('click', function () {
+        $.ajax({
+            type: "get",
+            url: "/employee/employeeLogout",
+            dataType: 'json',
+            success: function(info) {
+                if(info.success) {
+                    location.href = "login.html";
+                }
+            }
+        })
+    })
+    
 })
