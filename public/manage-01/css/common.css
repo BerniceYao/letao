@@ -133,3 +133,17 @@ ul {
 .pr_5 {
     padding-right: 5px;
 }
+
+/* 内容 */
+.mt_20 {
+    margin-top: 20px;
+}
+
+.echarts-left {
+    width: 48%;
+    height: 400px;
+}
+.echarts-right {
+    width: 48%;
+    height: 400px; 
+}

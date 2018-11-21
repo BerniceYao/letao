@@ -35,5 +35,10 @@ $(function() {
             }
         })
     })
+
+    // 4. 二级菜单
+    $('.category').on('click', function() {
+        $(this).next().stop().slideToggle();
+    })
     
 })
