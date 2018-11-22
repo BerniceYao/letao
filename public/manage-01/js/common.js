@@ -1,5 +1,4 @@
-$(function() {
-    // 1. 进度条
+// 1. 进度条
     // 1.1 发送ajax请求开启进度条
     $(document).on('ajaxStart', function() {
         NProgress.start();
@@ -10,6 +9,7 @@ $(function() {
         NProgress.done();
     })
 
+$(function() {
     // 2.侧边栏的隐藏与显示
     $('.lt_topbar .menu').on('click', function () {
         console.log(11);
@@ -20,7 +20,7 @@ $(function() {
 
     // 3. 退出功能
     $('.logout').on('click', function () {
-        $('#modal').modal('show');
+        $('#logoutModal').modal('show');
     })
 
     $('#logoutBtn').on('click', function () {
